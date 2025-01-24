@@ -79,7 +79,8 @@ public class MinGeneticMutation {
             for(char mutation : mutationMap.get(currentGene.charAt(i)).toCharArray())
             {
                   // construct the new mutated gene
-                  String mutatedGene = currentGene.substring(0,i) + mutation + currentGene.substring(i,1);
+                  String mutatedGene = currentGene.substring(0, i) + mutation + (i + 1 < currentGene.length() ? currentGene.substring(i + 1) : "");
+
             
 
             //if mutated gene is in the bank
